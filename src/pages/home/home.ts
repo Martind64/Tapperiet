@@ -11,6 +11,7 @@ export class HomePage {
   items: string[][];
   images: string[];
 
+
   currentUser = "Martin";
 
   attending:boolean = true;
@@ -23,10 +24,10 @@ export class HomePage {
     initializeItems() {
     this.items = [
       ['Peter', 'img/1'],
-      ['Nanna', 'img/2'],
-      ['Cecilie', 'img/3'],
-      ['Pernille', 'img/4'],
-      ['Mark', 'img/5'],
+      ['Nanna', 'img/nanna'],
+      ['Cecilie', 'img/cecilie'],
+      ['Pernille', 'img/pernille'],
+      ['Mark', 'img/mark'],
       ['Søren', 'img/6'],
       ['Henning', 'img/7'],
       ['John', 'img/8'],
@@ -36,36 +37,15 @@ export class HomePage {
     ];
   }
 
-  // initializeItems() {
-  //   this.items = [
-  //     'Peter',
-  //     'Nanna',
-  //     'Cecilie',
-  //     'Pernille',
-  //     'Mark',
-  //     'Søren',
-  //     'Henning',
-  //     'John',
-  //     'Birgitte',
-  //     'Ole',
-  //     'Helga',
-  //   ];
-  // }
+  showFriends(){
+  	    this.items = [
+      ['Nanna', 'img/nanna'],
+      ['Cecilie', 'img/cecilie'],
+      ['Pernille', 'img/pernille'],
+      ['Mark', 'img/mark'],
+    ];
+  }
 
-  // showImages(){
-  // 	this.images = [
-  // 	['1'],
-  // 	['2'],
-  // 	['3'],
-  // 	['4'],
-  // 	['5'],
-  // 	['6'],
-  // 	['7'],
-  // 	['8'],
-  // 	['9'],
-  // 	['10'],
-  // 	['11'],]
-  // }
 
   setColor(){
   	if (this.attending == true) {
@@ -91,7 +71,6 @@ export class HomePage {
         return (item[0].toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
-    console.log(this.items);
   }
 }
 

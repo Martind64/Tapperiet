@@ -1,16 +1,26 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>I dag</ion-title>
+    <ion-title><img class="tapper" src="img/tapper.png"></ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding id="content">
-
-
+<ion-content id="content">
 
 <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 <ion-list>
 <br>
+
+<ion-grid id="buttons">
+  <ion-row>
+    <ion-col>
+      <button ion-button outline full (click)="initializeItems()">Alle</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button outline full (click)="showFriends()">Venner</button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
   <ion-item *ngIf="attending">
   <p>Hvem kommer</p>
     <button ion-button item-right [color]="attending ? 'secondary' : 'danger'" (click)="setColor()">Kom i dag</button>

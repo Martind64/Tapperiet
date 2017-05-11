@@ -10,4 +10,16 @@ page-home {
 		// background-image: url("../img/background.jpg");
 	}
 
+	.toolbar-title-md .tapper{
+		max-height: 30px !important;
+		margin: 0;
+	}
+
+	.toolbar-title-wp .tapper{
+		max-height: 30px !important;
+	}
+	.button-outline{
+		background: white;
+	}
+
 }
